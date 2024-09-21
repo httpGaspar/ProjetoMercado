@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema CAIXA</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+    <header>
+        <img src="/assets/logo-merc.png" class="logoImg" alt="imgLogo">
+    </header>
+    
+    <div class="container">
+        <main class="main-content">
+            <div class="left-column">
+
+                <section class="secao1">
+                    
+                    <div class="product-details1">
+                        <div class="group-produto">
+                            <div class="produto">
+                                <label for="produto">PRODUTO:</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="inputProduto">
+                                <img src="/assets/loupe.png" alt="lupa" class="buscarProduto">
+                            </div>
+
+                        </div>
+
+                        <div class="detailS">
+                            <div class="detail1">
+                                <label for="codigoBarras" class="label1">CÓDIGO:</label>
+                                <input type="text" class="inputsColuna1">
+                            </div>
+                            <div class="detail1">
+                                <label for="quantidade" class="label1">QUANTIDADE:</label>
+                                <input type="text" class="inputsColuna1">
+                            </div>
+                            <div class="detail1">
+                                <label for="valorUnit" class="label1">VALOR UNITÁRIO:</label>
+                                <input type="text" class="inputsColuna1">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="product-details2">
+                        <div class="card">
+                            <!--SELECIONAR A MODALIDADE DE: VENDA OU ESTOQUE-->
+                            <div class="card-header">
+                                <h4>MODALIDADE DE VENDA</h4>
+                            </div>
+                            <div class="card-body">
+                                <img class="img-card" src="/assets/logo-merc.png" alt="imgModalidade">
+                            </div>
+                        </div>
+                        
+                        <div class="finalSecao1">
+                            <div class="detail1">
+                                <label for="valorUnit">DESCONTO:</label>
+                                <input type="text" class="inputVerde">
+                            </div>
+                          
+                                <div class="detail2">
+                                    <input type="button" class="button2" value="FINALIZAR COMPRA">
+                                </div>
+                                <div class="detail2">
+                                    <input type="button" class="button2" value="CANCELAMENTO">
+                                </div>
+
+                          
+
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+
+            <!--seção 2-->
+            <div class="right-column">
+
+                <section class="product-list">
+                    <h2 id="textList">LISTA DE PRODUTOS</h2>
+
+                    <div class="containerTabela">
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Código de Barras</th>
+                                    <th>Descrição</th>
+                                    <th>Qtd</th>
+                                    <th>Vlr. Unit.</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                   
+                                    <td>7897095024014</td>
+                                    <td>SUCO AURORA UVA TINTO 1.5L</td>
+                                    <td>1.000</td>
+                                    <td>19,99</td>
+                                    <td>19,99</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>7897126901763</td>
+                                    <td>LEITE CONDENSADO MOCA TP 395G</td>
+                                    <td>4.000</td>
+                                    <td>5,00</td>
+                                    <td>20,00</td>
+                                </tr>
+                                
+                                
+                            </tbody>
+                        </table>
+                    </div>
+    
+                </section>
+                
+                <!-- SEÇÃO 3-->
+                <section class="calculo">
+                    <div class="recSubtotal">
+                        <div class="detail3">
+                            <label for="subtotal">SUBTOTAL:</label>
+                            <input type="text" class="inputVerde">
+                        </div>
+
+                    </div>
+                    <div class="recTroco">
+
+                        <div class="detail3">
+                            <label for="totalRecebido">TOTAL RECEBIDO:</label>
+                                <input type="text" class="inputVerde">
+                        </div>
+                        <div class="detail3">
+                            <label for="troco">TROCO:</label>
+                                <input type="text" class="inputVerde">
+                        </div>
+                    </div>
+                    
+                </section>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <div class="footer-options">
+                <button>F1 - Nova Venda</button>
+                <button>F2 - Inserir Quantidade</button>
+                <button>F3 - Aplicar Desconto</button>
+                <button>F4 - Pesquisar Produto</button>
+                <button>F5 - Excluir Produto</button>
+                <button>F6 - Cancelar Venda</button>
+                <button>F7 - Finalizar</button>
+                <button >Esc - Sair</button>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
