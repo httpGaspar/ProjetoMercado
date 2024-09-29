@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa</title>
+    <link rel="stylesheet" href="./caixa.css">
+</head>
+<body>
+    <header>
+        <img src="/assets/logo-merc.png" class="logoImg" alt="imgLogo">
+    </header>
+
+    <div class="containner">
+        <div class="divRigth">
+            <h2 class="titulo1"><strong>PRODUTO:</strong></h2>
+            <div class="produtos">
+
+                <input type="text" placeholder="Nome do Produto" id="productName">
+
+                <button id="pesquisar">
+                    <img src="/assets/lupa.png">
+                </button>
+
+            </div>
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="codigoBarras" class="label">CÓDIGO:</label>
+                    <input type="text" class="inputCampo">
+                </div>
+                <div class="campo">
+                    <label for="quantidade" class="label">NCM:</label>
+                    <input type="text" class="inputCampo">
+                </div>
+                <div class="campo">
+                    <label for="valorUnit" class="label">QUANTIDADE:</label>
+                    <input type="text" class="inputCampo">
+                </div>
+                <div class="campo">
+                    <label for="valorUnit" class="label">VALOR:</label>
+                    <input type="text" class="inputCampo" placeholder="R$ 0,00" oninput="formatarMoeda(this)">
+                </div>
+            </div>
+
+            <button class="modalidade" id="Voltar" onclick="voltar()">
+                    <h2 class="titleModalidade">MODALIDADE DE VENDA</h2>
+                    <img src="/assets/fontmenor.png">
+            </button>
+
+            <div class="compra">
+                <div class="desconto">
+                    <h3 class="titulo"><strong>CUPOM DE DESCONTO:</strong></h3>
+                    <input type="text" placeholder="XUXAXOU" class="cupom">
+                </div>
+
+                <div class="finalizar">
+                    <button id="botaoFinalizar" class="titulo"><strong>FINALIZAR COMPRA</strong></button>
+                    <br> <br>
+                    <button id="botaoCancelar" class="titulo"> <strong>CANCELAMENTO</strong></button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="divLeft">
+            <section class="lista">
+                <h2 id="textList">LISTA DE PRODUTOS</h2>
+
+                <div class="tabela">
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código de Barras</th>
+                                <th>Descrição</th>
+                                <th>Qtd</th>
+                                <th>Vlr. Unit.</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <!--Carregar os itens que forão colocados no carrinho-->                                
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div class="subtotal">
+                <h3 class="titulo">SUBTOTAL:</h3>
+                <input type="text" id="valor" placeholder="R$ 0,00" oninput="formatarMoeda(this)">
+            </div>
+    
+        </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="options"> 
+            <button onclick="pesquisar()">F4 - Pesquisar Produto</button>
+            <button onclick="quantidade()">F5 - Inserir Quantidade</button>
+            <button onclick="voltar()">F7 - Voltar ao início</button>
+            <button onclick="finalizar()">F8 - Finalizar</button>
+            <button onclick="cancelar()">F9 - Cancelamento</button>
+        </div>
+    </footer>
+
+    <script src="./caixa.js"></script>
+</body>
+</html>

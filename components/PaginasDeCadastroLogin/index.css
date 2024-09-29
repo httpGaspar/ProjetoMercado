@@ -7,7 +7,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F6E9B2;
+    background-color: #C1E2A4;
 }
 
 .logoImg {
@@ -46,9 +46,18 @@ body {
     width: 90%;
 }
 
+.input:hover {
+    background-color: #C1E2A4;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(157, 236, 157, 0.5);
+}
+
 .botao {
     background-color: #F3CA52;
-    padding: 7%;
+    padding: 4%;
     border: none;
     border-radius: 12px;
     margin-left: 50px;
@@ -56,6 +65,11 @@ body {
     font-size: medium;
 }
 
+.botao:hover {
+    padding: 4.5%;
+    
+
+}
 .divbotao {
     display: flex;
     justify-content: space-between;

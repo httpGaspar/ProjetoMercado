@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C1E2A4;
+
+}
+
+header {
+    background-color: #0A6847;
+    padding: 0.3%;
+}
+
+.logoImg {
+    width: 3%;
+    height: auto;
+    margin-left: 1%;
+}
+
+.containner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 15px;
+}
+.divRigth {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo1 {
+    color: #0A6847;
+    margin-left: 30px;
+    margin-bottom: -10px;
+}
+
+.titulo {
+    color: #0A6847;
+    margin-left: 30px;
+    margin-bottom: 10px;
+
+}
+
+.produto {
+    align-items: center;
+}
+
+#productName {
+    background-color: #0A6847;
+    padding: 20px;
+    width: 40%;
+    border: none;
+    border-radius: 20px;
+    font-size: 28px;
+    color: #fff;
+}
+
+#productName::placeholder {
+    font-size: 24px;
+    align-items: center;
+}
+
+#productName:focus{
+    outline: none;
+}
+
+#pesquisar {
+    background-color: #0A6847;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 10px;
+}
+
+.campos {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.inputCampo {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: #F3CA52;
+}
+
+.label {
+    color: #0A6847;
+}
+
+.modalidade {
+    background-color: #7ABA78;
+    width: 30%;
+    margin-left: 25px;
+    text-align: center;
+    height: 250px;
+    border-radius: 24px;
+    padding-top: 3px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.titleModalidade {
+    color: #0A6847;
+}
+
+.modalidade:hover {
+    padding: 3px;
+}
+
+.cupom {
+    background-color: #0A6847;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+.cupom::placeholder {
+    font-size: 20px;
+}
+
+.cupom:focus {
+    outline: none;
+}
+
+.compra {
+    display: flex;
+    flex-direction: row;
+}
+
+.finalizar {
+    margin-top: -40px;
+    margin-left: 15%;
+    align-items: center;
+}
+
+#botaoFinalizar{
+    padding: 16px;
+    background-color: #F3CA52;
+    border-radius: 15px;
+    border: none;
+    width: 300px;
+    font-size: large;
+}
+
+#botaoCancelar {
+    padding: 16px;
+    background-color: #F3CA52;
+    border-radius: 15px;
+    border: none;
+    width: 300px;
+    font-size: large;
+}
+
+.divLeft {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 15px;
+    width: 400px; 
+    color: #0A6847;
+    align-items: center;
+    border-radius: 18px;
+    background-color: #F3CA52;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.tabela {
+    width: 100%;
+    min-height: 280px;
+
+    max-height: 280px;
+    overflow-y: auto;
+    border-radius: 12px;
+
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+}
+
+thead {
+    background-color: #efefef; 
+    position: sticky;
+    top: 0; /* Mantém o cabeçalho no topo */
+    z-index: 1; /* Garante que o cabeçalho fique acima das linhas da tabela */
+
+}
+
+th, td {
+    padding: 5px;
+    border: 2px solid #e0e0e0; /* Define a cor e espessura da borda */
+    text-align: center;
+    font-size: 11px; /*altera o tamanho do texto da tabela*/
+    font-weight: bold;
+}
+
+.subtotal {
+    margin-left: 130px;
+}
+
+#valor{
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    width: 170px;
+    background-color: #0A6847;
+    border: none;
+    border-radius: 20px;
+}
+
+#valor::placeholder{
+    font-size: 20px;
+}
+#valor:focus{
+    outline: none;
+}
+
+.footer {
+    background-color: #0A6847;
+    padding: 4.9px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.options button {
+    background-color: #0A6847;
+    border: none;
+    color: white;
+    margin: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}

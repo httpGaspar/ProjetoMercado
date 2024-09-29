@@ -2,7 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-
+    background-color: #C1E2A4;
 
 }
 
@@ -23,7 +23,6 @@ header {
     flex-wrap: wrap; /* Permite que as colunas se ajustem em telas menores */
     margin: auto;
     /* overflow: hidden; BARRA DE ROLAGEM*/
-    background-color: #91c28f; /*91c28f*/
 }
 
 .main-content {
@@ -290,10 +289,7 @@ th, td {
 .recSubtotal{
     max-width: 50%;
 }
-.recTroco {
-    display: flex;
-    flex-direction: column;
-}
+
 .inputVerde {
     background-color: #7ABA78;
     border: none;
@@ -314,22 +310,17 @@ th, td {
 
 }
 
-.recTroco {
-    display: flex;
-    flex-direction: row;
-}
-
  
 /*---------------------------------------------------------------------------------------------*/
 .footer {
-    background-color: #0e7490;
+    background-color: #0A6847;
     padding: 4.9px;
     text-align: center;
     color: white;
 }
 
 .footer-options button {
-    background-color: #0e7490;
+    background-color: #0A6847;
     border: none;
     color: white;
     margin: 8px;
