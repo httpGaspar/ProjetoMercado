@@ -12,7 +12,7 @@ document.getElementById('Sair').addEventListener('click', function() {
 });
 
 function irParaVenda() {
-    window.location.href = '../PaginaDeVenda/venda.html';
+    window.location.href = '../PaginaDeVenda/caixa.html';
 }
 
 function irParaEstoque() {

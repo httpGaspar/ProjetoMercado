@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="finalizar">
-                    <button id="botaoFinalizar" class="titulo"><strong>FINALIZAR COMPRA</strong></button>
+                    <button id="botaoFinalizar" class="titulo"><strong>FINALIZAR VENDA</strong></button>
                     <br> <br>
                     <button id="botaoCancelar" class="titulo"> <strong>CANCELAMENTO</strong></button>
                 </div>
@@ -80,7 +80,7 @@
                                 <th>Total</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="produtosTabela">
                         <!--Carregar os itens que forão colocados no carrinho-->                                
                         </tbody>
                     </table>
@@ -106,6 +106,50 @@
         </div>
     </footer>
 
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Finalizar Venda</h2>
+            <form id="formVenda">
+                <label for="escolha">Forma de pagamento:</label>
+                <select id="escolha" onchange="mostrarConteudo()">
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Debito">Débito</option>
+                    <option value="Credito">Crédito</option>
+                    <option value="Pix">PIX</option>
+                </select>
+    
+                <!-- O conteúdo dinâmico será inserido aqui -->
+                <div id="conteudoPagamento"></div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalPesquisa" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modalPesquisa')">&times;</span>
+            <h2>Pesquisar Produtos</h2>
+            <input type="text" id="campoPesquisa" placeholder="Digite o nome do produto" oninput="filtrarProdutos()">
+            <ul id="listaProdutos">
+                <!-- Produtos disponíveis serão inseridos aqui -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal de Cancelamento -->
+    <div id="modalCancelamento" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal('modalCancelamento')">&times;</span>
+            <h2>Cancelar Produto</h2>
+            <label for="produtoCancelar">Escolha o produto a ser cancelado:</label>
+            <select id="produtoCancelar">
+                <!-- As opções serão preenchidas dinamicamente -->
+            </select>
+            <button onclick="confirmarCancelamento()" class="buttonModel">Confirmar Cancelamento</button>
+        </div>
+    </div>
+
+    
     <script src="./caixa.js"></script>
 </body>
 </html>

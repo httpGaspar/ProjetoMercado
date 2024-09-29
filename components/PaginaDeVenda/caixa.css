@@ -198,16 +198,16 @@ table {
 thead {
     background-color: #efefef; 
     position: sticky;
-    top: 0; /* Mantém o cabeçalho no topo */
-    z-index: 1; /* Garante que o cabeçalho fique acima das linhas da tabela */
+    top: 0;
+    z-index: 1;
 
 }
 
 th, td {
     padding: 5px;
-    border: 2px solid #e0e0e0; /* Define a cor e espessura da borda */
+    border: 2px solid #e0e0e0;
     text-align: center;
-    font-size: 11px; /*altera o tamanho do texto da tabela*/
+    font-size: 11px;
     font-weight: bold;
 }
 
@@ -248,3 +248,91 @@ th, td {
     font-size: 15px;
     cursor: pointer;
 }
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin-top: 10px; /* Espaçamento entre os rótulos e os campos */
+}
+
+.modal-content input {
+    margin-bottom: 15px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttonModelD {
+    margin-top: 10px;
+    margin-left: 40%;
+    background-color: #0A6847;
+    color: #F3CA52;
+    padding: 15px;
+    border-radius: 14px;
+    border: none;
+    font-size: 15px;
+}
+
+.buttonModelD:hover {
+    padding: 16px;
+}
+
+.buttonModel {
+    margin-top: 10px;
+    background-color: #0A6847;
+    color: #F3CA52;
+    padding: 15px;
+    border-radius: 14px;
+    border: none;
+    font-size: 15px;
+}
+
+ #escolha {
+    background-color: #0A6847;
+    color: #F3CA52;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15x;
+ }
+
+ #produtoCancelar {
+    margin-bottom: 10px;
+    padding: 10px;
+ }
