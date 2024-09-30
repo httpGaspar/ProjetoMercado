@@ -8,7 +8,7 @@ document.getElementById('Estoque').addEventListener('click', function() {
 
 //ainda tem que ser criada
 document.getElementById('Sair').addEventListener('click', function() {
-    window.location.href = '../PaginasDeCadastroLogin/login.html';
+    window.location.href = '/index.html';
 });
 
 function irParaVenda() {
@@ -19,7 +19,7 @@ function irParaEstoque() {
     window.location.href = '../PaginaDeEstoque/estoque.html';}
 
 function sair() {
-    window.location.href = '../PaginasDeCadastroLogin/login.html'
+    window.location.href = '/index.html'
 }
 
 document.getElementById('Venda').addEventListener('click', irParaVenda);

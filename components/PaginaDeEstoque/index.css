@@ -53,7 +53,14 @@ button {
     border: none;
     font-size: 18px;
     color: #F3CA52;
-
+    cursor: pointer;
+}
+button:hover {
+    background-color: #1A4D2E;
+}
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.384);
 }
 
 table {
@@ -126,4 +133,5 @@ tbody {
 .botaomodel {
     margin-top: 10px;
     margin-left: 40%;
+    cursor: pointer;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./components/PaginaDeCadastro/index.css">
 </head>
 <body>
     <header>
@@ -23,8 +23,9 @@
             <input class="input" type="password" placeholder="Senha">
             <br><br>
 
-            <div class="divbotao">
+            <div class="divbotaoL">
                 <button type="button" class="botao" onclick="redirecionar()"><strong>Cancelar</strong></button>
+                <br>
                 <button type="button" class="botao"><strong>Login</strong></button>
 
             </div>
@@ -35,7 +36,7 @@
 
     <script>
         function redirecionar() {
-            window.location.href = "cadastro.html"
+            window.location.href = "./components/PaginadeCadastro/cadastro.html"
         }
     </script>
 </body>

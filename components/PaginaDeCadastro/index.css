@@ -19,13 +19,13 @@ body {
 .secaoDeLogim {
     background-color: #0A6847;
     width: 300px;
-    height: 300px;
+    height: 100%;
 
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-left: 38%;
-    margin-top: 7%;
+    margin-top: 4%;
     border-radius: 24px;
     padding: 2%;
 }
@@ -63,20 +63,33 @@ body {
     margin-left: 50px;
     color: #FFF;
     font-size: medium;
+    cursor: pointer;
 }
-
 .botao:hover {
-    padding: 4.5%;
-    
-
+    background-color: #f1bd27;
 }
+.botao:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.384);
+}
+
 .divbotao {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -50px;
+    padding: 2%;
+}
+
+.divbotaoL {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left: -50px;
     padding: 2%;
 }
+
 
 .OU{
     text-align: center;
