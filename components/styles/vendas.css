@@ -1,0 +1,407 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C1E2A4;
+}
+
+header {
+    background-color: #0A6847;
+    padding: 0.3%;
+}
+
+.logoImg {
+    width: 3%;
+    height: auto;
+    margin-left: 1%;
+}
+
+.containner {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+}
+.divRigth {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo1 {
+    color: #0A6847;
+    margin-left: 10px;
+    margin-bottom: -10px;
+}
+
+.titulo {
+    color: #0A6847;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+}
+
+.produto {
+    align-items: center;
+}
+
+#productName {
+    background-color: #0A6847;
+    padding: 20px;
+    width: 40%;
+    border: none;
+    border-radius: 20px;
+    font-size: 28px;
+    color: #fff;
+}
+
+#productName::placeholder {
+    font-size: 24px;
+    align-items: center;
+}
+
+#productName:focus{
+    outline: none;
+}
+
+#pesquisar {
+    background-color: #0A6847;
+    padding: 20px;
+    padding-right: 40%;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#pesquisar:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.384);
+}
+#pesquisar:hover {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.384);
+}
+
+.campos {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.inputCampo {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: #F3CA52;
+}
+
+.label {
+    color: #0A6847;
+}
+
+.modalidade {
+    background-color: #7ABA78;
+    width: 34%;
+    margin-left: 25px;
+    text-align: center;
+    height: 250px;
+    border-radius: 24px;
+    padding-top: 3px;
+    margin-top: 20px;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
+.modalidade:hover {
+    padding: 3px;
+    background-color: #77d173;
+}
+.modalidade:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.384);
+
+}
+
+.titleModalidade {
+    color: #0A6847;
+}
+
+
+.cupom {
+    background-color: #0A6847;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+.cupom::placeholder {
+    font-size: 20px;
+}
+
+.cupom:focus {
+    outline: none;
+}
+
+.compra {
+    display: flex;
+    flex-direction: row;
+}
+
+.finalizar {
+    margin-top: -40px;
+    margin-left: 15%;
+    align-items: center;
+}
+
+.botaofinalizar{
+    padding: 16px;
+    background-color: #F3CA52;
+    border-radius: 15px;
+    border: none;
+    width: 300px;
+    font-size: large;
+    cursor: pointer;
+    color: #0A6847;
+    margin-left: 50px;
+}
+.botaofinalizar:hover {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.384);
+}
+.botaofinalizar:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.384);
+}
+
+.divLeft {
+    display: flex;
+    flex-direction: column;
+    margin-left: 18%;
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 15px;
+    width: 400px; 
+    color: #0A6847;
+    align-items: center;
+    border-radius: 18px;
+    background-color: #F3CA52;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.tabela {
+    width: 100%;
+    min-height: 280px;
+
+    max-height: 280px;
+    overflow-y: auto;
+    border-radius: 12px;
+
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+}
+
+thead {
+    background-color: #efefef; 
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+
+th, td {
+    padding: 5px;
+    border: 2px solid #e0e0e0;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.subtotal {
+    margin-left: 130px;
+}
+
+#valor{
+    padding: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    width: 170px;
+    background-color: #0A6847;
+    border: none;
+    border-radius: 20px;
+}
+
+#valor::placeholder{
+    font-size: 20px;
+}
+#valor:focus{
+    outline: none;
+}
+
+.footer {
+    background-color: #0A6847;
+    padding: 4.9px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.options button {
+    background-color: #0A6847;
+    border: none;
+    color: white;
+    margin: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin-top: 10px; /* Espaçamento entre os rótulos e os campos */
+}
+
+.modal-content input {
+    margin-bottom: 15px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttonModelD {
+    margin-top: 10px;
+    margin-left: 40%;
+    background-color: #0A6847;
+    color: #F3CA52;
+    padding: 15px;
+    border-radius: 14px;
+    border: none;
+    font-size: 15px;
+}
+
+.buttonModelD:hover {
+    padding: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.384);
+}
+.buttonModelD:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.384);
+}
+
+.buttonModel {
+    margin-top: 10px;
+    background-color: #0A6847;
+    color: #F3CA52;
+    padding: 15px;
+    border-radius: 14px;
+    border: none;
+    font-size: 15px;
+}
+.buttonModel:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.384);
+}
+.buttonModel:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.384);
+}
+
+ #escolha {
+    background-color: #0A6847;
+    color: #F3CA52;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15x;
+ }
+
+ #produtoCancelar {
+    margin-bottom: 10px;
+    padding: 10px;
+ }
+
+ .mensagem {
+    color: red; /* Ou a cor que preferir */
+    font-weight: bold;
+}
+
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita o scroll se necessário */
+    background-color: rgb(0,0,0); /* Fallback de cor */
+    background-color: rgba(0,0,0,0.4); /* Preto com opacidade */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Pode ser ajustado */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

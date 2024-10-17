@@ -1,0 +1,66 @@
+header {
+    background-color: #0A6847;
+    padding: 0.3%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C1E2A4;
+}
+
+.logoImg {
+    width: 3%;
+    height: auto;
+    margin-left: 1%;
+}
+
+.Menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.Navegar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #0A6847;
+    border-radius: 24px;
+    padding: 70px;
+    height: 180px;
+    cursor: pointer;
+}
+.Navegar:hover{
+    padding: 73px;
+    box-shadow: 0 0 20px rgba(0, 17, 0, 0.5);
+}
+.Navegar:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.384);
+}
+
+.texto {
+    color: #F3CA52;
+    display: flex;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.textoSair {
+    color: #F3CA52;
+    display: flex;
+    text-align: center;
+    margin-left: 30px;
+    margin-left: 50px;
+}
+
+.F {
+    color: #F3CA52;
+}
+

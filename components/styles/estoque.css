@@ -1,0 +1,138 @@
+header {
+    background-color: #0A6847;
+    padding: 0.3%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C1E2A4;
+}
+
+.logoImg {
+    width: 3%;
+    height: auto;
+    margin-left: 1%;
+}
+
+.titulo {
+    text-align: center;
+    color: #0A6847;
+}
+
+.texto {
+    margin-left: 20px;
+    color: #0A6847;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.pesquisa {
+    padding-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+}
+
+.pesquisa:focus {
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 30%;
+    margin-bottom: 10px;
+    background-color: #0A6847;
+    border-radius: 24px;
+    border: none;
+    font-size: 18px;
+    color: #F3CA52;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1A4D2E;
+}
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.384);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tbody {
+    background-color: #ccc;
+}
+
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 1; /* Fica em cima */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgb(0,0,0); /* Cor de fundo */
+    background-color: rgba(0,0,0,0.4); /* Fundo preto com opacidade */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% da parte superior e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin-top: 10px; /* Espaçamento entre os rótulos e os campos */
+}
+
+.modal-content input {
+    margin-bottom: 15px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.botaomodel {
+    margin-top: 10px;
+    margin-left: 40%;
+    cursor: pointer;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa</title>
+    <link rel="stylesheet" href="../styles/vendas.css">
+</head>
+<body>
+    <header>
+        <img src="../../assets/logo-merc.png" class="logoImg" alt="imgLogo">
+    </header>
+
+    <div class="containner">
+        <div class="divRigth">
+            <h2 class="titulo1"><strong>PRODUTO:</strong></h2>
+            <div class="produtos">
+                <button id="pesquisar" onclick="pesquisarProduto()">
+                    <img src="../../assets/lupa.png">
+                </button>
+            </div>
+            
+
+            <div class="campos">
+                <div class="campo">
+                    <label for="codigoBarras" class="label">CÓDIGO:</label>
+                    <input type="text" class="inputCampo" id="codigoBarras" onkeypress="buscarProduto(event)">
+                </div>
+                <div class="campo">
+                    <label for="quantidade" class="label">QUANTIDADE:</label>
+                    <input type="text" class="inputCampo" id="quantidadeVendida">
+                </div>
+            </div>
+
+            <button class="modalidade" id="Voltar" onclick="voltar()">
+                <h2 class="titleModalidade">MODALIDADE DE VENDA</h2>
+                <img src="../../assets/fontmenor.png">
+            </button>
+
+            <div class="compra">
+                <div class="desconto">
+                    <h3 class="titulo"><strong>CUPOM DE DESCONTO:</strong></h3>
+                    <input type="text" placeholder="XUXAXOU" class="cupom">
+                </div>
+
+                <div class="finalizar">
+                    <button class="botaofinalizar" id="botaoFinalizar" class="titulo"><strong>FINALIZAR VENDA</strong></button>
+                    <br> <br>
+                    <button class="botaofinalizar" id="botaoCancelar" class="titulo" onclick="removerUltimoItem()"><strong>CANCELAMENTO</strong></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="divLeft">
+            <section class="lista">
+                <h2 id="textList">LISTA DE PRODUTOS</h2>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código de Barras</th>
+                                <th>Descrição</th>
+                                <th>Qtd</th>
+                                <th>Vlr. Unit.</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="produtosTabela">
+                        <!-- Carregar os itens que foram colocados no carrinho -->                                
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div class="subtotal">
+                <h3 class="titulo">SUBTOTAL:</h3>
+                <input type="text" id="valor" placeholder="R$ 0,00" oninput="formatarMoeda(this)">
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal de Pesquisa -->
+    <div id="modalPesquisa" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Pesquisar Produtos</h2>
+            <input type="text" id="campoPesquisa" placeholder="Digite o nome do produto" oninput="filtrarProdutos()">
+            <ul id="listaProdutos">
+                <!-- Produtos disponíveis serão inseridos aqui via JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Finalizar Venda</h2>
+                <form id="formVenda">
+                    <label for="escolha">Forma de pagamento:</label>
+                    <select id="escolha" onchange="mostrarConteudo()">
+                        <option value="Dinheiro">Dinheiro</option>
+                        <option value="Debito">Débito</option>
+                        <option value="Credito">Crédito</option>
+                        <option value="Pix">PIX</option>
+                    </select>
+        
+                    <!-- O conteúdo dinâmico será inserido aqui -->
+                    <div id="conteudoPagamento"></div>
+                </form>
+            </div>
+        </div>
+    
+    <footer class="footer">
+        <div class="options"> 
+            <button onclick="pesquisar()">F5 - Pesquisar Produto</button>
+            <button onclick="voltar()">F7 - Voltar ao início</button>
+            <button onclick="finalizar()">F8 - Finalizar</button>
+            <button onclick="cancelar()">F9 - Cancelamento</button>
+        </div>
+    </footer>
+
+    <script src="../../js/vendas.js"></script>
+    <script src="../../js/venda-pesquisa.js"></script>
+
+</body>
+</html>

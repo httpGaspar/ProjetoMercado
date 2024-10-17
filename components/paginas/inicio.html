@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="../styles/inicio.css">
+</head>
+<body>
+    <header>
+        <img src="../../assets/logo-merc.png" class="logoImg" alt="imgLogo">
+    </header>
+
+    <section class="Menu">
+
+        <div class="Navegar" id="Venda">
+            <div>
+                <h1 class="texto"><strong>Vender</strong></h1>
+                <img src="../../assets/map_grocery-or-supermarket.png" class="imagemBotao">
+                <h2 class="F">F1</h2>
+            </div>
+        </div>
+
+        <div class="Navegar" id="Estoque">
+            <div>
+                <h1 class="texto"><strong>Estoque</strong></h1>
+                <img src="../../assets/material-symbols_shelves.png" class="imagemBotao">
+                <h2 class="F">F2</h2>
+            </div>
+        </div>
+
+        <div class="Navegar" id="Sair">
+            <div>
+                <h1 class="textoSair"><strong>Sair</strong></h1>
+                <img src="../../assets/codicon_run-all.png">
+                <h2 class="F">F4</h2>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+                document.getElementById('Venda').addEventListener('click', function() {
+            window.location.href = '../paginas/venda.html';
+        });
+
+        document.getElementById('Estoque').addEventListener('click', function() {
+            window.location.href = '../paginas/estoque.html';
+        });
+
+        //ainda tem que ser criada
+        document.getElementById('Sair').addEventListener('click', function() {
+            window.location.href = '../index.html';
+        });
+
+        function irParaVenda() {
+            window.location.href = '../paginas/venda.html';
+        }
+
+        function irParaEstoque() {
+            window.location.href = '../paginas/estoque.html';}
+
+        function sair() {
+            window.location.href = '../../index.html'
+        }
+
+        document.getElementById('Venda').addEventListener('click', irParaVenda);
+        document.getElementById('Estoque').addEventListener('click', irParaEstoque);
+        document.getElementById('Sair').addEventListener('click', sair);
+
+        document.addEventListener('keydown', function(event) {
+            switch (event.key) {
+                case 'F1':
+                    event.preventDefault();
+                    irParaVenda();
+                    break;
+                case 'F2':
+                    event.preventDefault();
+                    irParaEstoque();
+                    break;
+                case 'F4':
+                    event.preventDefault();
+                    sair();
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>

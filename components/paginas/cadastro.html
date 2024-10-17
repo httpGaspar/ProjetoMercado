@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../styles/cadastro.css">
+</head>
+<body>
+    
+    <header>
+        <img src="../../assets/logo-merc.png" class="logoImg" alt="imgLogo">
+    </header>
+
+    <section class="secaoDeLogim">
+        <div class="Login">
+            <h1 class="titulo"><strong>Cadastro</strong></h1>
+
+            <p class="texto"><strong>Usuário:</strong></p>
+            <input class="input" type="text" id="username" placeholder="Nome" required>
+
+            <p class="texto"><strong>Senha:</strong></p>
+            <input class="input" type="password" id="password" placeholder="Senha" required>
+            <br><br>
+
+            <div class="divbotao">
+                <button type="button" class="botao" onclick="RegisterUser()"><strong>Cadastrar</strong></button> 
+                <p class="OU"><strong>OU</strong></p>
+                <button type="button" class="botao" onclick="irParaLogim()"><strong>Voltar ao Login</strong></button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function irParaLogim() {
+            window.location.href = "/index.html"; // Verifique se o caminho do arquivo está correto.
+        }
+
+        async function RegisterUser() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (!username || !password) {
+                alert('Preencha todos os campos!');
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:8080/auth/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ username: username, password: password }),
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    alert(`Usuário cadastrado com sucesso! Token: ${data.token}`);
+                    // Redirecionar para a página de login após o sucesso
+                    window.location.href = '/index.html';
+                } else {
+                    const errorData = await response.json(); // Detalhar erro
+                    alert(`Erro ao cadastrar usuário: ${errorData.message || 'O nome de usuário já está em uso.'}`);
+                }
+            } catch (error) {
+                alert(`Erro na comunicação com o servidor: ${error.message}`);
+            }
+        }
+    </script>
+</body>
+</html>

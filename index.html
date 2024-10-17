@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="components/styles/index.css">
+</head>
+<body>
+    <header>
+        <img src="assets/logo-merc.png" class="logoImg" alt="imgLogo">
+    </header>
+
+    <section class="secaoDeLogim">
+
+        <div class="Login">
+            <h1 class="titulo"><strong>Login</strong></h1>
+
+            <p class="texto"><strong>Usuário:</strong></p>
+            <input class="input" type="text" id="username" placeholder="Nome">
+
+            <p class="texto"><strong>Senha:</strong></p>
+            <input class="input" type="password" id="password" placeholder="Senha">
+            <br><br>
+
+            <div class="divbotaoL">
+                <button type="button" class="botao" onclick="redirecionar()"><strong>Cancelar</strong></button>
+                <br>
+                <button type="button" class="botao" id="loginButton" onclick="login()"><strong>Login</strong></button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        // Função para redirecionar para a página de cadastro
+        function redirecionar() {
+            window.location.href = "components/paginas/cadastro.html";
+        }
+
+        // Função para fazer login
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Defina as credenciais válidas
+            const validUsername = 'admin';
+            const validPassword = 'senha';
+
+            // Verifica se as credenciais estão preenchidas
+            if (!username || !password) {
+                alert("Por favor, preencha ambos os campos!");
+                return;
+            }
+
+            // Verifica se as credenciais são válidas
+            if (username === validUsername && password === validPassword) {
+                // Armazena as credenciais no localStorage
+                localStorage.setItem('username', username);
+                localStorage.setItem('password', password);
+
+                // Redireciona para a página principal (ou onde você quiser)
+                window.location.href = "components/paginas/inicio.html"; // Altere para a página desejada
+            } else {
+                alert("Credenciais inválidas! Tente novamente.");
+            }
+        }
+    </script>
+</body>
+</html>
